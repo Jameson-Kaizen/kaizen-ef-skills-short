@@ -98,6 +98,23 @@
   .dcard .dh .bd{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
   .dcard p{margin:0;font-size:14.5px;}
   .sec-h{font-size:13px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:.05em;margin:20px 0 10px;}
+  .dcard .move{margin-top:8px;background:var(--soft);border-radius:10px;padding:9px 12px;font-size:14px;}
+  .dcard .move b{color:var(--gd);}
+  .idx{display:flex;align-items:baseline;gap:10px;margin:6px 0 4px;}
+  .idx .num{font-size:40px;font-weight:800;color:var(--gd);line-height:1;}
+  .idx .of{font-size:14px;color:var(--muted);font-weight:600;}
+  .idxbar{height:10px;border-radius:999px;background:var(--soft);overflow:hidden;margin:6px 0 4px;}
+  .idxbar > div{height:100%;border-radius:999px;background:var(--g);}
+  .summary{border-radius:12px;padding:12px 15px;margin:14px 0;font-size:14.5px;}
+  .summary.win{background:#eef6f0;border:1px solid #cfe6d7;}
+  .summary.focus{background:#fbf6ec;border:1px solid #ecdcbd;}
+  .summary b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;}
+  .start{margin:18px 0;background:#fdf8ef;border:1px solid #ecdcbd;border-radius:14px;padding:16px 18px;}
+  .start-h{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+  .start p{margin:0 0 10px;font-size:14.5px;}
+  .start .st-item{margin:0 0 10px;}
+  .start .st-item b{display:block;font-size:14.5px;margin-bottom:2px;}
+  .start .st-item span{font-size:14px;}
   .cta{background:#0f2a1c;color:#eaf3ee;border-radius:16px;padding:22px 22px;margin:20px 0 0;text-align:center;}
   .cta p{margin:0 0 14px;font-size:15px;}
   .cta .btn{background:var(--orange);color:#fff;padding:12px 30px;font-size:15px;text-decoration:none;}
@@ -152,18 +169,26 @@
     <div class="r-tag">Your Executive Functioning Snapshot</div>
     <h1 id="r-name">Your Executive Functioning Snapshot</h1>
     <p class="sub" id="r-sub"></p>
+    <div class="idx"><span class="num" id="r-idx"></span><span class="of">out of 100 overall</span></div>
+    <div class="idxbar"><div id="r-idxbar" style="width:0%"></div></div>
     <p class="overall" id="r-overall"></p>
-    <div class="bars" id="r-bars"></div>
+    <div id="r-summary"></div>
     <div class="ai" id="ai" hidden>
       <div class="ai-head">A personalised read on your profile</div>
       <div class="ai-body" id="ai-body"></div>
     </div>
+    <div class="start" id="r-start" hidden>
+      <div class="start-h">Where to start</div>
+      <p>You do not need to work on everything at once. Start with the skill or two below; they tend to unlock the others.</p>
+      <div id="r-start-items"></div>
+    </div>
+    <div class="bars" id="r-bars"></div>
     <div class="sec-h">Your eight skills in detail</div>
     <div class="body" id="r-body"></div>
     <div class="cta">
       <p>Want help turning your growth areas into strengths? Book a free 30 minute coaching consult. We will look at your full snapshot, hear what is going on, and tell you honestly whether we think we are a fit.</p>
       <a class="btn" id="r-book" href="#" target="_blank" rel="noopener">Explore Coaching</a>
-      <a class="btn-2" id="r-long" href="https://kaizeneduc.outgrow.us/adult-efs-quiz" target="_blank" rel="noopener">Or take the free 14-domain deep dive</a>
+      <a class="btn-2" id="r-long" href="https://jameson-kaizen.github.io/kaizen-ef-assessment/" target="_blank" rel="noopener">Or take the free 14-domain deep dive</a>
     </div>
     <button class="btn btn-ghost btn-block" id="r-retake" style="margin-top:16px">Take it again</button>
     <p class="disc">This is an educational self-reflection tool, not a diagnosis or clinical assessment. It does not diagnose ADHD or any condition. If you are in distress or crisis, please reach out for support, and in Canada or the US you can call or text 988 for the Suicide and Crisis Lifeline.</p>
@@ -234,6 +259,19 @@
     "selfaware":{strength:"You read your own thinking accurately and hold your focus and decision quality across a full day. Keep doing your hardest thinking early and protecting recovery between demanding tasks.",developing:"You track your own thinking fairly well, but focus and decision quality fade as the day or the demands stack up. Tip: front-load your hardest work and protect short breaks to keep your judgment sharp.",growth:"Your focus and decision quality dip as the day or the demands stack up, and blind spots are easy to miss. Tip: treat attention like a battery: front-load your hard work, protect transitions, and add short breaks; a quick end-of-day reflection sharpens self-awareness over time."}
   };
   var BAND_LABEL={strength:"Strength",developing:"Developing",growth:"Growth Area"};
+
+  // One tonight-sized starter move per skill, shown on Developing and Growth Area cards
+  // and in the "Where to start" panel.
+  var MOVES={
+    "focus":"Run one 15 minute focus sprint tonight: phone in another room, one tab, one task, timer visible. Protect one sprint before you try to fix the whole day.",
+    "memory":"Stop holding it in your head tonight. Park every to-do, step, and detail in one capture spot the moment it appears, and work from the list, not from memory.",
+    "start":"Pick the task you have been avoiding and give it two minutes tonight: a timer, and the first ugly step only. Permission to stop after two minutes is what gets you in.",
+    "planning":"Before bed, write tomorrow's top three in order and put a realistic time next to each. Deciding tonight spares tomorrow's willpower.",
+    "organization":"Give one thing a home tonight: the desk, the downloads folder, the bag. One two-minute reset of one zone, not a whole-life overhaul.",
+    "emotion":"When something lands hard tonight, name the feeling in one word before you respond. Naming it moves the moment from reaction to choice.",
+    "flex":"Next time a plan changes tonight, say the new plan out loud in one sentence before reacting to the old one. Naming the switch is what unsticks it.",
+    "selfaware":"Set one mid-evening check-in: what am I doing, how is it landing, what needs adjusting? Then offload your open loops to paper before bed."
+  };
 
   var answers={}, pos=0, LAST=null;
   var SCREENS=["intro","q","gate","results"];
@@ -307,6 +345,42 @@
       ? "Every one of your eight skills is landing in the strength range right now. That is a genuine asset."
       : "Your strongest area is "+LAST.strengths.concat(LAST.developing,LAST.growth).sort(function(a,b){return a.score-b.score;})[0].name+". The area with the most room to grow is "+LAST.primary.name+".";
 
+    // overall 0-100 index = average strength across the eight skills
+    var overall=Math.round(LAST.profile.reduce(function(s,p){return s+p.strengthPct;},0)/LAST.profile.length);
+    $("r-idx").textContent=overall;
+    $("r-idxbar").style.width=overall+"%";
+
+    // strengths-first summary strips
+    var byStrength=LAST.profile.slice().sort(function(a,b){return b.strengthPct-a.strengthPct;});
+    var topStrengths=(LAST.strengths.length?LAST.strengths:byStrength.slice(0,3));
+    var topGrowth=(LAST.growth.length?LAST.growth.slice():byStrength.slice(-2).reverse());
+    var sum=$("r-summary"); sum.innerHTML="";
+    var win=document.createElement("div"); win.className="summary win";
+    win.innerHTML="<b>Your strengths</b>"+topStrengths.slice(0,4).map(function(p){return p.name;}).join(", ")+".";
+    sum.appendChild(win);
+    if(!LAST.positive){
+      var foc=document.createElement("div"); foc.className="summary focus";
+      foc.innerHTML="<b>Where to focus</b>"+topGrowth.slice(0,3).map(function(p){return p.name;}).join(", ")+".";
+      sum.appendChild(foc);
+    }
+
+    // "Where to start": the one or two lowest skills, each with its tonight-sized move.
+    var startEl=$("r-start");
+    if(LAST.positive){ startEl.hidden=true; }
+    else{
+      var startPicks=(LAST.growth.length?LAST.growth.slice():LAST.developing.slice())
+        .sort(function(a,b){return a.strengthPct-b.strengthPct;}).slice(0,2);
+      if(startPicks.length){
+        startEl.hidden=false;
+        var si=$("r-start-items"); si.innerHTML="";
+        startPicks.forEach(function(p){
+          var it=document.createElement("div"); it.className="st-item";
+          it.innerHTML="<b>"+p.name+"</b><span>"+(MOVES[p.key]||"")+"</span>";
+          si.appendChild(it);
+        });
+      } else { startEl.hidden=true; }
+    }
+
     var bars=$("r-bars"); bars.innerHTML="";
     LAST.profile.forEach(function(p){
       var color=bandColor(p.band);
@@ -320,8 +394,10 @@
     LAST.profile.forEach(function(p){
       var color=bandColor(p.band);
       var card=document.createElement("div"); card.className="dcard";
-      card.innerHTML='<div class="dh">'+p.name+' <span class="bd" style="color:'+color+'">'+BAND_LABEL[p.band]+'</span></div>'+
+      var chtml='<div class="dh">'+p.name+' <span class="bd" style="color:'+color+'">'+BAND_LABEL[p.band]+'</span></div>'+
         '<p>'+COPY[p.key][p.band]+'</p>';
+      if(p.band!=="strength" && MOVES[p.key]) chtml+='<p class="move"><b>One small move:</b> '+MOVES[p.key]+'</p>';
+      card.innerHTML=chtml;
       body.appendChild(card);
     });
 
