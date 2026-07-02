@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Executive Functioning Snapshot | Kaizen Education Services</title>
+<meta name="description" content="A short self-assessment of your executive functioning across eight everyday skills. About 4 minutes, with a personalised read at the end."/>
+<link rel="icon" href="og-share.png"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Executive Functioning Snapshot"/>
+<meta property="og:description" content="See your executive functioning strengths and growth areas across eight skills, and get a personalised read."/>
+<meta property="og:image" content="og-share.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W56RJ3LXWW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-W56RJ3LXWW');
+</script>
+
+<!-- Meta Pixel -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1089881403604799');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1089881403604799&ev=PageView&noscript=1" alt="" /></noscript>
+
+<style>
+  :root{--g:#2f8f5b;--gd:#246c45;--ink:#243027;--muted:#6b7a70;--bg:#ffffff;--soft:#f1f6f2;
+    --line:#dde7e0;--warn:#c0563b;--gold:#c98a2b;--red:#c0563b;--radius:16px;}
+  html,body{margin:0;background:#f6f8f6;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);min-height:100vh;padding:22px 12px 44px;box-sizing:border-box;line-height:1.5;}
+  *{box-sizing:border-box;}
+  [hidden]{display:none!important;}
+  .head{max-width:640px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;}
+  .head img{height:34px;width:auto;display:block;}
+  .wrap{max-width:640px;margin:0 auto;}
+  .card{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px 26px;box-shadow:0 2px 14px rgba(36,108,69,.06);}
+  .prog{max-width:640px;margin:0 auto 10px;}
+  .prog-track{height:6px;border-radius:999px;background:var(--line);overflow:hidden;}
+  .prog-fill{height:100%;background:var(--g);border-radius:999px;transition:width .3s ease;}
+  .prog-lbl{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:0 0 6px;text-align:center;}
+  h1{font-size:26px;margin:0 0 12px;font-weight:800;}
+  h2{font-size:22px;margin:0 0 10px;font-weight:700;}
+  .sub{font-size:15px;color:var(--muted);font-weight:600;margin:0 0 8px;}
+  .overall{font-size:14px;font-weight:700;color:var(--gd);margin:0 0 16px;}
+  .lead{font-size:16px;margin:0 0 16px;}
+  .fine{font-size:12px;color:var(--muted);margin:16px 0 0;font-style:italic;}
+  .disc{font-size:12px;color:var(--muted);background:var(--soft);border-radius:12px;padding:12px 15px;margin:18px 0 0;line-height:1.5;}
+  .btn{border:none;border-radius:12px;font-size:16px;font-weight:600;padding:14px 26px;cursor:pointer;font-family:inherit;
+    transition:transform .05s,background .15s,opacity .15s;background:var(--g);color:#fff;}
+  .btn:hover{background:var(--gd);}
+  .btn:active{transform:translateY(1px);}
+  .btn:disabled{background:#b6c9bd;cursor:not-allowed;}
+  .btn-ghost{background:transparent;color:var(--gd);border:1px solid var(--line);}
+  .btn-ghost:hover{background:var(--soft);}
+  .btn-block{display:block;width:100%;}
+  .qtext{font-size:19px;font-weight:700;margin:2px 0 18px;}
+  .opts{display:flex;flex-direction:column;gap:10px;}
+  .opt{text-align:left;background:var(--soft);border:1.5px solid var(--line);border-radius:12px;
+    padding:14px 16px;font-size:16px;font-weight:600;color:var(--ink);cursor:pointer;font-family:inherit;transition:background .1s,border-color .1s;}
+  .opt:hover{background:#e6f1ea;border-color:var(--g);}
+  .opt.sel{background:var(--g);color:#fff;border-color:var(--gd);}
+  .qnav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;}
+  .link{background:none;border:none;color:var(--gd);font-weight:600;font-size:15px;cursor:pointer;font-family:inherit;padding:6px;}
+  .link:disabled{color:#b6c9bd;cursor:default;}
+  .input{width:100%;font-size:16px;font-family:inherit;color:var(--ink);background:#fafdfb;border:1.5px solid var(--line);
+    border-radius:12px;padding:13px 14px;margin-bottom:12px;}
+  .input:focus{outline:none;border-color:var(--g);background:#fff;}
+  .consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);margin:2px 0 16px;line-height:1.45;cursor:pointer;}
+  .consent input{margin-top:2px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--g);}
+  .err{color:var(--warn);font-size:13px;font-weight:600;margin:10px 0 0;text-align:center;}
+  .r-tag{font-size:12px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;}
+  .bars{margin:18px 0;}
+  .barrow{margin-bottom:12px;}
+  .barhead{display:flex;justify-content:space-between;font-size:14px;margin-bottom:4px;}
+  .barhead .nm{font-weight:600;}
+  .barhead .lv{font-weight:700;}
+  .bartrack{height:9px;border-radius:999px;background:var(--soft);overflow:hidden;}
+  .barfill{height:100%;border-radius:999px;transition:width .6s ease;}
+  .ai{margin:18px 0;background:var(--soft);border:1px solid var(--line);border-radius:14px;padding:16px 18px;}
+  .ai-head{font-size:12px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;}
+  .ai-body{font-size:15.5px;white-space:pre-line;}
+  .ai-body.loading{color:var(--muted);font-style:italic;}
+  .dcard{border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:0 0 12px;}
+  .dcard .dh{font-size:15px;font-weight:700;margin:0 0 6px;}
+  .dcard .dh .bd{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;}
+  .dcard p{margin:0;font-size:14.5px;}
+  .sec-h{font-size:13px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:.05em;margin:20px 0 10px;}
+  .cta{background:#0f2a1c;color:#eaf3ee;border-radius:16px;padding:22px 22px;margin:20px 0 0;text-align:center;}
+  .cta p{margin:0 0 14px;font-size:15px;}
+  .cta .btn{background:#fff;color:var(--gd);}
+  .cta .btn:hover{background:#eaf3ee;}
+  .cta .btn-2{display:inline-block;margin-top:12px;background:transparent;color:#eaf3ee;border:1px solid #3a5c49;text-decoration:none;padding:12px 22px;border-radius:12px;font-weight:600;font-size:14.5px;}
+  .cta .btn-2:hover{background:#14311f;}
+  .cta small{display:block;margin-top:12px;color:#a9c3b4;font-size:12.5px;}
+  .foot{max-width:640px;margin:20px auto 0;text-align:center;font-size:12px;color:#8a978f;}
+  @media(max-width:480px){.card{padding:22px 16px;}h1{font-size:22px;}}
+</style>
+</head>
+<body>
+
+<div class="head"><img src="kaizen-mark.png" alt="Kaizen Education Services"/></div>
+
+<div class="prog" id="prog" hidden>
+  <div class="prog-lbl" id="prog-lbl"></div>
+  <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+</div>
+
+<div class="wrap">
+  <section id="intro" class="card" hidden>
+    <h1>Your Executive Functioning Snapshot</h1>
+    <p class="lead">Executive functioning is the set of everyday skills your brain uses to get things done: focusing, remembering, starting, planning, staying organized, managing emotion, adapting under pressure, and knowing your own patterns. Everyone is stronger in some than others.</p>
+    <p class="lead">This snapshot reads eight of those skills and shows you where your strengths and growth areas are. About 4 minutes. Answer honestly, accuracy depends on it. You get a personalised read at the end.</p>
+    <button class="btn btn-block" id="start">Start the snapshot</button>
+    <p class="disc">This is an educational self-reflection tool, not a diagnosis or clinical assessment. It does not diagnose ADHD or any condition. Kaizen Education Services provides coaching. We are not medical or mental health professionals, and this does not replace care from a qualified professional. If you are in distress, please reach out for support.</p>
+  </section>
+
+  <section id="q" class="card" hidden>
+    <div class="qtext" id="q-text"></div>
+    <div id="q-body"></div>
+    <div class="qnav">
+      <button class="link" id="q-back">Back</button>
+    </div>
+  </section>
+
+  <section id="gate" class="card" hidden>
+    <h2>Where should we send your results?</h2>
+    <p class="lead">Your executive functioning snapshot is ready. Add your details and we will show it now, plus a short series of practical tools for your profile. No spam, unsubscribe anytime.</p>
+    <input id="g-name" class="input" type="text" placeholder="Your first name" autocomplete="given-name"/>
+    <input id="g-email" class="input" type="email" placeholder="Your email address" autocomplete="email" inputmode="email"/>
+    <label class="consent"><input id="g-consent" type="checkbox"/>
+      <span>By submitting, I agree to receive my result and a short series of follow up emails from Kaizen Education Services. I can unsubscribe at any time.</span></label>
+    <button class="btn btn-block" id="g-go" disabled>Show my results</button>
+    <p class="err" id="g-err" hidden></p>
+    <p class="fine">See our <a href="https://kaizeneduc.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  </section>
+
+  <section id="results" class="card" hidden>
+    <div class="r-tag">Your Executive Functioning Snapshot</div>
+    <h1 id="r-name">Your Executive Functioning Snapshot</h1>
+    <p class="sub" id="r-sub"></p>
+    <p class="overall" id="r-overall"></p>
+    <div class="bars" id="r-bars"></div>
+    <div class="ai" id="ai" hidden>
+      <div class="ai-head">A personalised read on your profile</div>
+      <div class="ai-body" id="ai-body"></div>
+    </div>
+    <div class="sec-h">Your eight skills in detail</div>
+    <div class="body" id="r-body"></div>
+    <div class="cta">
+      <p>Want help turning your growth areas into strengths? Book a free 30 minute coaching consult. We will look at your full snapshot, hear what is going on, and tell you honestly whether we think we are a fit.</p>
+      <a class="btn" id="r-book" href="#" target="_blank" rel="noopener">Explore Coaching</a>
+      <a class="btn-2" id="r-long" href="https://kaizeneduc.outgrow.us/adult-efs-quiz" target="_blank" rel="noopener">Or take the free 14-domain deep dive</a>
+      <small>Calgary: in person is available. Everyone else, we coach virtually. Prefer to start with reading? Watch your inbox for practical tools you can use this week.</small>
+    </div>
+    <button class="btn btn-ghost btn-block" id="r-retake" style="margin-top:16px">Take it again</button>
+    <p class="disc">This is an educational self-reflection tool, not a diagnosis or clinical assessment. It does not diagnose ADHD or any condition. If you are in distress or crisis, please reach out for support, and in Canada or the US you can call or text 988 for the Suicide and Crisis Lifeline.</p>
+  </section>
+</div>
+
+<div class="foot">Kaizen Education Services. An educational self-reflection tool, not a diagnosis or clinical assessment.</div>
+
+<script>
+(function(){
+  "use strict";
+  var AI_ENABLED = true;
+  var LEAD_ENDPOINT = "https://kaizen-working-memory-quiz.jameson-84b.workers.dev";
+  var BOOKING_URL = "https://api.leadconnectorhq.com/widget/booking/ktnCWMUydaVYrfYSpCdi";
+
+  function track(n,p){ try{ if(window.gtag) gtag("event",n,p||{}); }catch(e){} }
+  var ATTRIBUTION=(function(){var o={};try{var p=new URLSearchParams(location.search);
+    ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(function(k){var v=p.get(k);if(v)o[k]=v;});}catch(e){}
+    o.referrer=document.referrer||"";return o;})();
+  var $=function(id){return document.getElementById(id);};
+
+  // 5-point frequency scale. Option value = points (Almost Always = 4 ... Never = 0).
+  var OPTS=[["Almost Always",4],["Often",3],["Sometimes",2],["Rarely",1],["Never",0]];
+  var QUESTIONS=[
+    {id:"q1",d:"focus",rev:false,text:"I catch myself re-reading the same paragraph or replaying content without it registering."},
+    {id:"q2",d:"focus",rev:false,text:"I check my phone or switch tabs even when I'm actively trying to focus."},
+    {id:"q3",d:"focus",rev:false,text:"When I get interrupted, it takes real effort to find my place and get back on track."},
+    {id:"q4",d:"memory",rev:false,text:"I walk into a room and forget why I went there."},
+    {id:"q5",d:"memory",rev:false,text:"I forget to follow through on things I promised to do, even when I had every intention of doing them."},
+    {id:"q6",d:"memory",rev:false,text:"I forget about commitments or plans until it's too late to act on them properly."},
+    {id:"q7",d:"start",rev:false,text:"I feel stuck or paralyzed when I'm not sure exactly where to begin."},
+    {id:"q8",d:"start",rev:false,text:"Procrastination is a recurring problem in my life."},
+    {id:"q9",d:"start",rev:false,text:"I start projects with enthusiasm but struggle to follow through to completion."},
+    {id:"q10",d:"planning",rev:false,text:"I start my day without a clear sense of what I need to accomplish."},
+    {id:"q11",d:"planning",rev:false,text:"When facing a large project, I struggle to break it into manageable steps."},
+    {id:"q12",d:"planning",rev:false,text:"I consistently underestimate how long tasks will take."},
+    {id:"q13",d:"organization",rev:false,text:"My physical or digital workspace is cluttered and hard to navigate."},
+    {id:"q14",d:"organization",rev:false,text:"I waste time searching for things I've misplaced: files, documents, everyday items."},
+    {id:"q15",d:"organization",rev:false,text:"My organizational systems tend to collapse when life gets busy."},
+    {id:"q16",d:"emotion",rev:false,text:"I say things in conversations that I immediately wish I could take back."},
+    {id:"q17",d:"emotion",rev:false,text:"When I get frustrated, I struggle to push through and keep going."},
+    {id:"q18",d:"emotion",rev:false,text:"Minor setbacks or inconveniences feel disproportionately upsetting in the moment."},
+    {id:"q19",d:"flex",rev:false,text:"Unexpected changes to my plans or schedule throw me off significantly."},
+    {id:"q20",d:"flex",rev:false,text:"When my original approach isn't working, I struggle to quickly come up with another."},
+    {id:"q21",d:"flex",rev:true,text:"I maintain the quality of my work even when deadlines are tight or stakes are high."},
+    {id:"q22",d:"selfaware",rev:true,text:"I have a clear, realistic understanding of my own strengths and limitations."},
+    {id:"q23",d:"selfaware",rev:false,text:"My ability to focus or make good decisions drops significantly as the day goes on."},
+    {id:"q24",d:"selfaware",rev:false,text:"When I have too many competing demands at once, I make more mistakes than usual."}
+  ];
+  var DOMAINS=[
+    {key:"focus",slug:"focus-attention",name:"Focus & Attention",items:[1,2,3],rev:[]},
+    {key:"memory",slug:"memory-follow-through",name:"Memory & Follow-Through",items:[4,5,6],rev:[]},
+    {key:"start",slug:"getting-started",name:"Getting Started & Follow-Through",items:[7,8,9],rev:[]},
+    {key:"planning",slug:"planning-time",name:"Planning & Time Management",items:[10,11,12],rev:[]},
+    {key:"organization",slug:"organization",name:"Organization",items:[13,14,15],rev:[]},
+    {key:"emotion",slug:"emotional-regulation",name:"Emotional Regulation & Impulse Control",items:[16,17,18],rev:[]},
+    {key:"flex",slug:"flexibility-pressure",name:"Flexibility & Pressure",items:[19,20,21],rev:[21]},
+    {key:"selfaware",slug:"self-awareness-stamina",name:"Self-Awareness & Mental Stamina",items:[22,23,24],rev:[22]}
+  ];
+  var COPY={
+    "focus":{strength:"You hold focus over time, even with distractions around you, a real asset for deep work. Keep protecting it by scheduling distraction-free blocks for your most demanding tasks.",developing:"Your focus holds on a good day but slips when you are tired or the task gets dull, so some work takes longer than it should. Tip: protect one distraction-free block for your most demanding task before the day fills up.",growth:"Distractions pull you away easily, and refocusing after interruptions costs real time and energy. Tip: design your environment to remove distractions rather than relying on willpower to resist them."},
+    "memory":{strength:"You reliably hold information in mind and follow through on what you say you'll do, so others can count on you. Keep leaning on a simple capture system so nothing important rests on memory alone.",developing:"You remember most of what matters, but details and smaller commitments slip through when things get busy. Tip: capture every task and every 'I'll do that later' the moment it comes up, so nothing rests on memory alone.",growth:"You lose track of details in the moment or forget commitments until it's too late. This is a memory system, not a character flaw. Tip: capture every task and 'I'll do that later' the instant it arises, so your system remembers for you."},
+    "start":{strength:"You start tasks without much friction and carry them through to completion: less time lost to avoidance, more finished work. Keep protecting your momentum on the ambiguous projects.",developing:"You get going fine on clear tasks, but ambiguous or low-interest work invites delay and the occasional unfinished project. Tip: shrink the first step to two minutes so starting feels easy, then let momentum carry you.",growth:"Getting started is a barrier and early enthusiasm can fade before the finish line. Procrastination is the usual symptom. Tip: commit to just two minutes to begin, then break the work into visible milestones you can tick off."},
+    "planning":{strength:"You plan with clarity about what matters most and have a realistic sense of time, so you tend to finish what you set out to do. Keep a brief daily plan to stay ahead of competing demands.",developing:"You plan well on some days, but on others you start without a map or underestimate how long things take. Tip: each morning pick your top three priorities and add a 20% buffer to your time estimates.",growth:"You may start the day without a clear plan or underestimate how long things take, producing busyness without real progress. Tip: each morning pick your top 3 priorities and add a 20% buffer to your time estimates."},
+    "organization":{strength:"You keep functional systems for your space, files, and information, so you find what you need without friction. Keep it simple enough to survive your busiest weeks.",developing:"Your systems work when life is calm but tend to fray during busy stretches, costing you time and focus. Tip: simplify to the lightest system you will actually keep up under pressure.",growth:"Disorganization quietly drains time and focus, and systems that work when life is calm tend to collapse when it gets busy. Tip: build the simplest system you'll actually maintain under pressure. Complexity kills consistency."},
+    "emotion":{strength:"You manage emotional responses well and tend to pause before acting, so feelings rarely derail your decisions. Keep noticing your early signals to stay measured under pressure.",developing:"You usually stay measured, but strong emotions or pressure can occasionally push you to react before thinking it through. Tip: learn your early warning signs and take one breath before responding in high-stakes moments.",growth:"Strong emotions and minor setbacks can hit harder than the moment warrants, and you may act or speak before fully thinking it through. Tip: learn your early warning signs and take one breath before responding in high-stakes moments."},
+    "flex":{strength:"You adapt quickly when plans change and tend to hold, or even raise, your performance when stakes are high. Others rely on you in demanding moments; keep a steady pre-game routine to stay sharp.",developing:"You adapt reasonably well, but sudden changes or high stakes can knock you off your game more than you would like. Tip: build if-then scripts for your common disruptions and a steady pre-performance routine.",growth:"Unexpected changes throw you off, and pressure tends to erode your performance right when it matters most. Tip: build if-then scripts for your common disruptions and a consistent pre-performance routine to steady yourself."},
+    "selfaware":{strength:"You read your own thinking accurately and hold your focus and decision quality across a full day. Keep doing your hardest thinking early and protecting recovery between demanding tasks.",developing:"You track your own thinking fairly well, but focus and decision quality fade as the day or the demands stack up. Tip: front-load your hardest work and protect short breaks to keep your judgment sharp.",growth:"Your focus and decision quality dip as the day or the demands stack up, and blind spots are easy to miss. Tip: treat attention like a battery: front-load your hard work, protect transitions, and add short breaks; a quick end-of-day reflection sharpens self-awareness over time."}
+  };
+  var BAND_LABEL={strength:"Strength",developing:"Developing",growth:"Growth Area"};
+
+  var answers={}, pos=0, LAST=null;
+  var SCREENS=["intro","q","gate","results"];
+  function show(id){ SCREENS.forEach(function(s){var e=$(s);if(e)e.hidden=(s!==id);}); $("prog").hidden=(id!=="q"); }
+
+  function start(){ answers={}; pos=0; track("quiz_start",{source:ATTRIBUTION.utm_source||"direct"}); if(window.fbq) fbq("trackCustom","QuizStart"); renderQ(); }
+
+  function renderQ(){
+    show("q");
+    var q=QUESTIONS[pos];
+    $("prog-fill").style.width=Math.round(pos/QUESTIONS.length*100)+"%";
+    $("prog-lbl").textContent="Question "+(pos+1)+" of "+QUESTIONS.length;
+    $("q-text").textContent=q.text;
+    var body=$("q-body"); body.innerHTML=""; $("q-back").disabled=(pos===0);
+    var wrap=document.createElement("div"); wrap.className="opts";
+    OPTS.forEach(function(opt){
+      var label=opt[0], val=opt[1];
+      var b=document.createElement("button"); b.className="opt"; b.textContent=label;
+      if(String(answers[q.id])===String(val)) b.classList.add("sel");
+      b.addEventListener("click",function(){ answers[q.id]=val; track("question_answered",{index:pos+1,id:q.id,domain:q.d}); next(); });
+      wrap.appendChild(b);
+    });
+    body.appendChild(wrap);
+  }
+  function next(){ if(pos<QUESTIONS.length-1){ pos++; renderQ(); } else finish(); }
+  function back(){ if(pos>0){ pos--; renderQ(); } }
+
+  // domain score = sum of items (reverse items use 4 - value) + 3  -> range 3..15
+  function domainScore(dom){
+    var raw=0;
+    dom.items.forEach(function(qn){
+      var v=Number(answers["q"+qn])||0;
+      if(dom.rev.indexOf(qn)>-1) v=4-v;
+      raw+=v;
+    });
+    return raw+3;
+  }
+  function bandOf(score){ return score<6?"strength":score<11?"developing":"growth"; }
+  // strength fill: strength (low score) = full bar, growth (high score) = near empty
+  function strengthPct(score){ return Math.round((15-score)/12*100); }
+
+  function finish(){
+    var profile=DOMAINS.map(function(dom){
+      var sc=domainScore(dom), bd=bandOf(sc);
+      return { key:dom.key, slug:dom.slug, name:dom.name, score:sc, band:bd, strengthPct:strengthPct(sc) };
+    });
+    var strengths=profile.filter(function(p){return p.band==="strength";});
+    var developing=profile.filter(function(p){return p.band==="developing";});
+    var growth=profile.filter(function(p){return p.band==="growth";});
+    // primary growth = highest score (most needs work); tie -> domain order
+    var primary=profile.slice().sort(function(a,b){return b.score-a.score;})[0];
+    var positive=(primary.score<=5); // every domain is a strength
+    LAST={ profile:profile, strengths:strengths, developing:developing, growth:growth,
+      primary:primary, positive:positive };
+    track("email_gate_view",{outcome:positive?"all-strengths":primary.slug});
+    show("gate"); var em=$("g-email"); if(em) try{em.focus();}catch(e){}
+  }
+
+  function bandColor(band){ return band==="strength"?"var(--gd)":band==="developing"?"var(--gold)":"var(--red)"; }
+
+  function renderResults(){
+    show("results");
+    var ns=LAST.strengths.length, nd=LAST.developing.length, ng=LAST.growth.length;
+    function plural(n,w){ return n+" "+w+(n===1?"":"s"); }
+    var parts=[];
+    if(ns) parts.push(plural(ns,"strength"));
+    if(nd) parts.push(nd+" developing");
+    if(ng) parts.push(plural(ng,"growth area"));
+    $("r-sub").textContent="Across eight executive functioning skills: "+parts.join(", ")+".";
+    $("r-overall").textContent=LAST.positive
+      ? "Every one of your eight skills is landing in the strength range right now. That is a genuine asset."
+      : "Your strongest area is "+LAST.strengths.concat(LAST.developing,LAST.growth).sort(function(a,b){return a.score-b.score;})[0].name+". The area with the most room to grow is "+LAST.primary.name+".";
+
+    var bars=$("r-bars"); bars.innerHTML="";
+    LAST.profile.forEach(function(p){
+      var color=bandColor(p.band);
+      var row=document.createElement("div"); row.className="barrow";
+      row.innerHTML='<div class="barhead"><span class="nm">'+p.name+'</span><span class="lv" style="color:'+color+'">'+BAND_LABEL[p.band]+'</span></div>'+
+        '<div class="bartrack"><div class="barfill" style="width:'+p.strengthPct+'%;background:'+color+'"></div></div>';
+      bars.appendChild(row);
+    });
+
+    var body=$("r-body"); body.innerHTML="";
+    LAST.profile.forEach(function(p){
+      var color=bandColor(p.band);
+      var card=document.createElement("div"); card.className="dcard";
+      card.innerHTML='<div class="dh">'+p.name+' <span class="bd" style="color:'+color+'">'+BAND_LABEL[p.band]+'</span></div>'+
+        '<p>'+COPY[p.key][p.band]+'</p>';
+      body.appendChild(card);
+    });
+
+    var bk=$("r-book"); bk.href=BOOKING_URL;
+    bk.addEventListener("click",function(){ track("cta_click",{location:"results"}); if(window.fbq) fbq("trackCustom","BookingClick"); });
+    $("r-long").addEventListener("click",function(){ track("cta_click",{location:"long-quiz"}); });
+  }
+
+  function emailValid(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function gateState(){ $("g-go").disabled=!(emailValid(($("g-email").value||"").trim()) && $("g-consent").checked); }
+  function submitLead(){
+    var email=($("g-email").value||"").trim(), firstName=($("g-name").value||"").trim();
+    if(!emailValid(email)||!$("g-consent").checked){ var e=$("g-err"); e.hidden=false; e.textContent="Please enter a valid email and check the box."; return; }
+    $("g-err").hidden=true; $("g-go").disabled=true; $("g-go").textContent="Loading your results…";
+    var slug=LAST.positive?"all-strengths":LAST.primary.slug;
+    track("lead_submit",{}); track("quiz_complete",{outcome:slug}); track("outcome",{outcome:slug});
+    if(window.fbq) fbq("track","Lead");
+    renderResults();
+    if(AI_ENABLED){ $("ai").hidden=false; var b=$("ai-body"); b.className="ai-body loading"; b.textContent="Writing a personalised read for you…"; }
+    var profileFlat={}; LAST.profile.forEach(function(p){ profileFlat[p.key]={name:p.name,score:p.score,band:p.band}; });
+    if(LEAD_ENDPOINT){
+      fetch(LEAD_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
+        firstName:firstName, email:email, consent:true, audience:"efsshort",
+        archetype:slug, archetypeName:"Executive Functioning Snapshot", positive:LAST.positive,
+        strengths:LAST.strengths.map(function(p){return p.name;}),
+        developing:LAST.developing.map(function(p){return p.name;}),
+        growth:LAST.growth.map(function(p){return p.name;}),
+        primaryGrowth:LAST.primary.name, profile:profileFlat, attribution:ATTRIBUTION
+      })}).then(function(r){return r.json();}).then(function(r){
+        if(AI_ENABLED){ var b=$("ai-body"); if(r&&r.insight){ b.className="ai-body"; b.textContent=r.insight; } else { $("ai").hidden=true; } }
+      }).catch(function(){ if(AI_ENABLED) $("ai").hidden=true; });
+    } else if(AI_ENABLED){ $("ai").hidden=true; }
+  }
+
+  function init(){
+    $("start").addEventListener("click",start);
+    $("q-back").addEventListener("click",back);
+    $("g-email").addEventListener("input",gateState);
+    $("g-consent").addEventListener("change",gateState);
+    $("g-go").addEventListener("click",submitLead);
+    $("g-email").addEventListener("keydown",function(e){ if(e.key==="Enter"&&!$("g-go").disabled) submitLead(); });
+    $("r-retake").addEventListener("click",start);
+    show("intro");
+  }
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init); else init();
+})();
+</script>
+</body>
+</html>
